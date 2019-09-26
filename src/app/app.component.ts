@@ -99,108 +99,64 @@ export class AppComponent {
     private suggest() : void{
         for (var t=1; t<18; t++){
             switch(t){
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
                 case 6:
-                case 7:
-                case 8:
                     document.getElementById("t" + t).style.backgroundColor="red"
                     break;
-                case 9:
-                case 10:
-                case 11:
-                case 12:
+                case 7:
+                case 5:
                 case 13:
                     document.getElementById("t" + t).style.backgroundColor="yellow"
                     break;
-                case 14:
-                case 15:
-                case 16:
-                case 17:
+                case 2:
+                case 4:
                     document.getElementById("t" + t).style.backgroundColor="green"
                     break;
             }   
         }
         for (var f=1; f<18; f++){
             switch(f){
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
                 case 6:
-                case 7:
-                case 8:
                     document.getElementById("f" + f).style.backgroundColor="red"
                     break;
-                case 9:
-                case 10:
+                case 2:
+                case 7:
                 case 11:
                 case 12:
-                case 13:
                     document.getElementById("f" + f).style.backgroundColor="yellow"
                     break;
-                case 14:
-                case 15:
-                case 16:
-                case 17:
+                case 999: //fortification sucks
                     document.getElementById("f" + f).style.backgroundColor="green"
                     break;
             }   
         }
         for (var r=1; r<18; r++){
             switch(r){
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
                 case 6:
-                case 7:
-                case 8:
                     document.getElementById("r" + r).style.backgroundColor="red"
                     break;
-                case 9:
-                case 10:
+                case 1:
+                case 2:
+                case 7:
                 case 11:
-                case 12:
-                case 13:
+                case 15:
+                case 17:
                     document.getElementById("r" + r).style.backgroundColor="yellow"
                     break;
-                case 14:
-                case 15:
-                case 16:
-                case 17:
+                case 8:
+                case 12:
                     document.getElementById("r" + r).style.backgroundColor="green"
                     break;
             }   
         }
         for (var i=1; i<18; i++){
             switch(i){
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                case 8:
+                case 0: //intervention is ok
                     document.getElementById("i" + i).style.backgroundColor="red"
                     break;
-                case 9:
-                case 10:
-                case 11:
-                case 12:
-                case 13:
+                case 14:
                     document.getElementById("i" + i).style.backgroundColor="yellow"
                     break;
-                case 14:
-                case 15:
-                case 16:
-                case 17:
+                case 2:
                     document.getElementById("i" + i).style.backgroundColor="green"
                     break;
             }   
