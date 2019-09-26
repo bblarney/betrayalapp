@@ -1,4 +1,4 @@
-# Betrayalapp
+# Betrayal App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
@@ -6,22 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## About
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This app is intended for Path of Exile players to use as a quick resource to determine best course of action during Immortal Syndicate encounters. The main syndicate table is layed out to provide information on which rewards a player will obtain depending on which safehouse the agent resides in. Users can click table cells to cycle through three colours (green, yellow, red) to correspond with the value of the rewards from that particular combination of agent/safehouse. A 'suggest' button is included to auto populate the table based on the suggested values of each combination (green for very good, yellow for ok, red for bad).
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Written in 2019 by Brett Larney
