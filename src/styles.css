@@ -1,0 +1,115 @@
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: #252525;
+    color: whitesmoke;
+    margin-bottom: 10%;
+}
+
+.footer{
+    position: absolute;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height:10%;
+    background-color: orange;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: black;
+}
+
+#header-title{
+    font-family: 'Nanum Gothic', sans-serif;
+    color: whitesmoke;
+    font-size: 48;
+    text-align: center;
+    align-self: center;
+}
+
+.flex-container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    float: center;
+}
+
+#main-table{
+    display: inline-table;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: whitesmoke;
+    width: 95%;
+    margin-left: 2.5%; 
+    margin-right: 2.5%;
+    text-shadow:
+    -1px -1px 0 #000,
+     0   -1px 0 #000,
+     1px -1px 0 #000,
+     1px  0   0 #000,
+     1px  1px 0 #000,
+     0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
+}
+
+#header-title{
+    text-shadow:
+    -1px -1px 0 #000,
+     0   -1px 0 #000,
+     1px -1px 0 #000,
+     1px  0   0 #000,
+     1px  1px 0 #000,
+     0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.red{
+ color: red
+}
+
+.yellow{
+color: yellow
+}
+
+.grey{
+color: grey
+}
+
+#t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8, #t9, #t10, #t11, #t12, #t13, #t14, #t15, #t16, #t17{
+    vertical-align: bottom;
+    text-align: center;
+}
+
+#f1, #f2, #f3, #f4, #f5, #f6, #f7, #f8, #f9, #f10, #f11, #f12, #f13, #f14, #f15, #f16, #f17{
+    vertical-align: bottom;
+    text-align: center;
+}
+
+#r1, #r2, #r3, #r4, #r5, #r6, #r7, #r8, #r9, #r10, #r11, #r12, #r13, #r14, #r15, #r16, #r17{
+    vertical-align: bottom;
+    text-align: center;
+}
+
+#i1, #i2, #i3, #i4, #i5, #i6, #i7, #i8, #i9, #i10, #i11, #i12, #i13, #i14, #i15, #i16, #i17{
+    vertical-align: bottom;
+    text-align: center;
+}
+
