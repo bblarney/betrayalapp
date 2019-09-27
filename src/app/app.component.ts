@@ -42,6 +42,13 @@ export class AppComponent {
         let i = 0;
         let colour = "";
 
+        //if the user clicks the image we need to get the id of the table cell parent
+        if (document.getElementById(elementId).tagName == "IMG"){
+            event.stopPropagation(); //without this the onclick fires twice
+            console.log("image clicked");
+            elementId = document.getElementById(elementId).parentElement.id;
+        }
+
         if (document.getElementById(elementId).style.backgroundColor == "green"){
             colour = "yellow";
             document.getElementById(elementId).style.backgroundColor=colour;
@@ -76,7 +83,6 @@ export class AppComponent {
         }
         this.layout[i-1] = colour;
         localStorage.setItem("betrayalapp", JSON.stringify(this.layout))
-
     }
 
     private reset() : void {
@@ -92,7 +98,6 @@ export class AppComponent {
         for (var i=1; i<18; i++){
             document.getElementById("i" + i).style.backgroundColor="#252525"
         }
-
         localStorage.removeItem("betrayalapp");
     }
 
@@ -167,15 +172,15 @@ export class AppComponent {
             x++;
         }
         for (var f=1; f<18; f++){
-            this.layout[x] = document.getElementById("t" + f).style.backgroundColor;
+            this.layout[x] = document.getElementById("f" + f).style.backgroundColor;
             x++;
         }
         for (var r=1; r<18; r++){
-            this.layout[x] = document.getElementById("t" + r).style.backgroundColor;
+            this.layout[x] = document.getElementById("r" + r).style.backgroundColor;
             x++;
         }
         for (var i=1; i<18; i++){
-            this.layout[x] = document.getElementById("t" + i).style.backgroundColor;
+            this.layout[x] = document.getElementById("i" + i).style.backgroundColor;
             x++;
         }
         localStorage.setItem("betrayalapp", JSON.stringify(this.layout))
