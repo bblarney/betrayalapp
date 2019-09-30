@@ -7,13 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'betrayalapp';
-    public layout: string[];
+    public layout: string[]; //keeps track of colour locations
     
     constructor(){
         this.layout = [];
     }
 
+    /*
+    Retrieves user choices (if avaiable) from localstorage
+    */
     ngOnInit() {
+        //if there is already some layout items saved then retrieve and display
         if (localStorage.getItem("betrayalapp") != null){
             this.layout = JSON.parse(localStorage.getItem("betrayalapp"));
             let k = 0;
@@ -37,7 +41,11 @@ export class AppComponent {
         }
     }
 
+    /*
+    Cycles through colours when user clicks a table cell
+    */
     private color(event: Event) : void{
+        //gets the elementid of the element where the function was called
         let elementId: string = (event.target as Element).id;
         let i = 0;
         let colour = "";
@@ -45,10 +53,10 @@ export class AppComponent {
         //if the user clicks the image we need to get the id of the table cell parent
         if (document.getElementById(elementId).tagName == "IMG"){
             event.stopPropagation(); //without this the onclick fires twice
-            console.log("image clicked");
             elementId = document.getElementById(elementId).parentElement.id;
         }
 
+        //rotate the colours
         if (document.getElementById(elementId).style.backgroundColor == "green"){
             colour = "yellow";
             document.getElementById(elementId).style.backgroundColor=colour;
@@ -66,6 +74,8 @@ export class AppComponent {
             document.getElementById(elementId).style.backgroundColor=colour;
         }
 
+        //gets the col number (0-17)
+        //since the names only go to 17 for each row need to add # for array format
         let j = elementId.substring(1)
         
         if (elementId.includes("t")){
@@ -82,9 +92,13 @@ export class AppComponent {
             i = parseInt(j) + i;
         }
         this.layout[i-1] = colour;
+        //saves localstorage item
         localStorage.setItem("betrayalapp", JSON.stringify(this.layout))
     }
 
+    /*
+    Set each cell in the table back to default colour
+    */
     private reset() : void {
         for (var t=1; t<18; t++){
             document.getElementById("t" + t).style.backgroundColor="#252525"
@@ -98,9 +112,14 @@ export class AppComponent {
         for (var i=1; i<18; i++){
             document.getElementById("i" + i).style.backgroundColor="#252525"
         }
+        //destroys localstorage item
         localStorage.removeItem("betrayalapp");
     }
 
+    /*
+    Set each cell in the table back to default colour
+    Cases are hardcoded but can change based on economy/updates
+    */
     private suggest() : void{
         for (var t=1; t<18; t++){
             switch(t){
@@ -166,6 +185,7 @@ export class AppComponent {
                     break;
             }   
         }
+        //since a lot of cells changed just loop over the whole table and get the colour
         let x = 0;
         for (var t=1; t<18; t++){
             this.layout[x] = document.getElementById("t" + t).style.backgroundColor;
@@ -183,6 +203,7 @@ export class AppComponent {
             this.layout[x] = document.getElementById("i" + i).style.backgroundColor;
             x++;
         }
+        //save selected colours
         localStorage.setItem("betrayalapp", JSON.stringify(this.layout))
     }
 
