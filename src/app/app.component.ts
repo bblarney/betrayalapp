@@ -44,7 +44,7 @@ export class AppComponent {
     /*
     Cycles through colours when user clicks a table cell
     */
-    private color(event: Event) : void{
+    color(event: Event) : void{
         //gets the elementid of the element where the function was called
         let elementId: string = (event.target as Element).id;
         let i = 0;
@@ -99,7 +99,7 @@ export class AppComponent {
     /*
     Set each cell in the table back to default colour
     */
-    private reset() : void {
+    reset() : void {
         for (var t=1; t<18; t++){
             document.getElementById("t" + t).style.backgroundColor="#252525"
         }
@@ -120,7 +120,7 @@ export class AppComponent {
     Set each cell in the table back to default colour
     Cases are hardcoded but can change based on economy/updates
     */
-    private suggest() : void{
+    suggest() : void{
         for (var t=1; t<18; t++){
             switch(t){
                 case 6:
