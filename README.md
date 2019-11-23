@@ -1,6 +1,6 @@
 # Betrayal App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
+View this project live @ https://frozen-atoll-54593.herokuapp.com/
 
 ## Development server
 
